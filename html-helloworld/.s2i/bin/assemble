@@ -1,0 +1,10 @@
+#!/bin/bash
+echo "Before default assemble"
+/usr/libexec/s2i/assemble
+rc=$?
+if [ $rc -eq 0 ];
+then
+  echo "Successfully assembled"
+else
+  echo "Assembly failed"
+fi
